@@ -53,9 +53,28 @@
         height: 200px;
         width: 200px;
     }
-    .contact{
-        
+    .foot-panel2{
+        flex-direction: column;
+        padding: 0px 70px;
+    }.foot-panel2 ul li{
+        text-wrap: wrap;
     }
-
+    @keyframes head1_animation{
+    
+        0%{
+            position: absolute;
+            /* transform: translateX(0px); */
+            left: 0px;
+        
+    
+        }
+        100%{
+            position: absolute;
+            left: 60vw;
+            /* transform: translateX(150vw); */
+            
+        }
+    }
+    
     
 }
