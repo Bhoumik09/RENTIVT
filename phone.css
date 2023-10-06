@@ -56,8 +56,6 @@
     .foot-panel2{
         flex-direction: column;
         padding: 0px 70px;
-    }.foot-panel2 ul li{
-        text-wrap: wrap;
     }
     @keyframes head1_animation{
     
