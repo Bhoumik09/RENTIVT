@@ -5,120 +5,11 @@
     scroll-behavior: smooth;
 }
 
-nav{
-    display:flex;
-    justify-content: space-between;
-   background-color: rgb(70, 117, 158);
-    min-height: 100px;
-
-}
-figure img{
-    min-height: 100px;
-    width: 200px;
-    padding-top: 5px;
-    margin-left: 5px;    
-}
-.line p{
-    font-family:  cursive;
-    font-size: 1.3rem;
-}
-.navbar{
-    display: flex;
-    align-items: center;
-    
-   
-}
 
 
-
-.nav-left{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-right: 23px;
-}
-#search{
-    border-radius: 2px 2px;
-    padding: 2px;
-    border: 4px solid red;
-    border-radius: 20px; 
-    font-weight: bolder;
-    box-shadow: 3px 3px;
-    font-family: cursive;
-    background-color: white;
-}
-.nav-left input[type=text]{
-    border: none;
-    background-color: white;
-    margin: 0;
-    padding: 8px;
-    border-radius: 20px; 
-    font-size: 1rem;
-}
-.nav-left a{
-    border-radius: 2px 2px;
-    padding: 8px 30px;
-    margin: 0px 30px;
-    border: 4px solid red;
-    border-radius: 20px;
-    font-weight: bolder;
-    background-color: white;
-    text-decoration: none;
-    font-family: cursive;
-    box-shadow: 3px 3px;
-}.nav-left input:hover{
-    cursor: pointer;
-    
-}a:hover{
-    cursor: pointer;
-
-}
-.navbar p{
-
-    font-size: 3rem;
-    font-family: cursive;
-    color: red;
-    font-weight: 900;
-    animation-name: rent;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: linear;
-    
-    
-}
-@keyframes rent {
-    0%{
-        transform: translateX(-200px);
-    }
-    100%{
-        transform: translateX(200px);
-    }
-    
-}
-@media screen and (max-width:1141px) {
-    @keyframes rent {
-        0%{
-            transform: translateX(-50px);
-        }
-        100%{
-            transform: translateX(50px);
-        }
-        
-    }
-    .navbar p{
-
-        font-size: 2rem;
-        animation-name: rent;
-        animation-duration: 1s;
-        
-        
-    }
-    
-}
 .item-name{
     width: 100%;
-    min-height: 150px;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,6 +85,7 @@ figure img{
     height: 100%;
     border-radius: 30px;
     padding: 10px;
+    font-size: 0.85rem;
     /* text-align: justify; */
    
 }.title{
