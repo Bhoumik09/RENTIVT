@@ -18,7 +18,7 @@
     z-index: -1;
 } */
 #vision{
-    background-color:#a3b2b3;
+    background-color:#dfb37d;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -41,22 +41,12 @@
     justify-content: center;
     text-align: center;
     font-weight: bolder;
+    
 
 }
-/* #services::before{
-    content: '';
-    background: url('buy-button-on-keyboard.jpg') no-repeat center center/cover;
-    position: absolute;
-    opacity: 0.5;
-    top:70px;
-    left: 0px;
-    width: 100vw;
-    min-height: 700px;
-    z-index: -1;
 
-} */
 .services{
-    background-color: rgba(67, 56, 56, 0.221);
+    background-color: rgb(225 224 100 / 81%);
     /* position: relative; */
     display: flex;
     flex-direction: column;
@@ -93,7 +83,8 @@
 }
 .services h3{
     font-weight: 900;
-    font-style: oblique;
+    color: red;
+    /* font-style: oblique; */
     font-size: 2rem;
     animation-name: head1_animation;
     animation-duration: 10s;
@@ -153,7 +144,7 @@
 #topDeal{
     display: flex;
     justify-content: center;
-    background-color: burlywood;
+    background-color: #dd954d;
     font-size: 1.5rem;
 
 }
@@ -165,8 +156,11 @@
     min-height: 100%;
     z-index: -1;
     opacity: 0.7;
-    background: url("contact.jpg") no-repeat center center/cover;
+    background: url("contact\ us.jpg") no-repeat center center/cover;
 
+}
+.contact-head{
+    color: red;
 }
 #contact-box{
     display: flex;
@@ -189,6 +183,7 @@
 #contact-box label{
    font-size: 1.3rem;
    font-family: 'Bree Serif', serif;
+   color: red;
 
 }.contact-head{
     text-align: center;
@@ -200,6 +195,7 @@ footer{
     margin-top: 15px;
     
 }
+
 .foot-panel1{
     background-color: #374758;
     
