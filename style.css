@@ -92,14 +92,16 @@
 
 }
 .services h3{
-    
+    font-weight: 900;
+    font-style: oblique;
+    font-size: 2rem;
     animation-name: head1_animation;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: alternate;
     position: absolute;
-    text-shadow: 4px 4px 2px yellow;
+    /* text-shadow: 4px 4px 2px yellow; */
     /* margin: 40px; */
     /* top: 20px; */
     /* top: 2px; */
@@ -226,7 +228,7 @@ footer{
     justify-content: space-evenly;
     margin: 40px 30px;
     list-style: none;
-    width: 800px;
+    /* width: 800px; */
     /* border: 2px solid red; */
     line-height: 1rem;
     color: white;
