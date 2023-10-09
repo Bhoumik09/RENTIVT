@@ -21,11 +21,15 @@
 @media screen and (max-width:600px) {
     .navbar{
         flex-direction: column;
-        /* justify-content: center; */
+        
         
 
        
     }
+     li{
+        display: flex;
+        flex-direction: column;
+    } 
     .navbar a{
         margin: 3px;
     }
@@ -56,6 +60,7 @@
     .foot-panel2{
         flex-direction: column;
         padding: 0px 70px;
+        align-items: center;
     }
     @keyframes head1_animation{
     
