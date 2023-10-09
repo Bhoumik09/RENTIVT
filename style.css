@@ -221,7 +221,7 @@ footer{
     display: flex;
     background-color: #222f3d;
     /* margin: 0px 60px; */
-    padding: 0px 150px;
+    justify-content: center;
     
     
 }.foot-panel2 ul{
