@@ -216,16 +216,13 @@ footer{
 .foot-panel2{
     display: flex;
     background-color: #222f3d;
-    /* margin: 0px 60px; */
     justify-content: center;
     
     
 }.foot-panel2 ul{
     justify-content: space-evenly;
     margin: 40px 30px;
-    list-style: none;
-    /* width: 800px; */
-    /* border: 2px solid red; */
+    list-style: none; 
     line-height: 1rem;
     color: white;
     
