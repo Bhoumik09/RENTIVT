@@ -46,7 +46,7 @@
 }
 
 .services{
-    background-color: rgb(225 224 100 / 81%);\\
+    background-color: rgb(225 224 100 / 81%);
     /* position: relative; */
     display: flex;
     flex-direction: column;
