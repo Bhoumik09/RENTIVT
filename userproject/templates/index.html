@@ -8,11 +8,31 @@
     <link rel="stylesheet" href="../static/phone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Oswald&family=Pacifico&family=Playball&family=Teko&display=swap" rel="stylesheet">
+    <style>
+    #contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url("../static/contact\ us.jpg") no-repeat center center/cover;
 
+}
+    </style>
 <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Oswald&family=Pacifico&family=Playball&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+    {% if messages %}
+    {% for message in messages%}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert" style="display: flex; justify-content: center; font-weight: bolder;">
+        
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor%}
+     {% endif %} 
     <nav class="navbar navbar-expand-lg bg-light
     ">
         <div class="container-fluid">
@@ -28,7 +48,11 @@
               </li>
               <li class="nav-item">
                 <a style="    color: red; font-weight: bold; font-size: 1.3rem;
-                "class="nav-link" href="#" >Contact Us</a>
+                "class="nav-link" href="#contact " >Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a style="    color: red; font-weight: bold; font-size: 1.3rem;
+                "class="nav-link" href="/upload" >Add Item</a>
               </li>
               <li class="nav-item dropdown">
                 <a style="    color: red; font-weight: bold; font-size: 1.3rem;
@@ -51,9 +75,9 @@
                 </a>
                 <ul  style="border: none;" class="dropdown-menu bg-light">
                     <li><a style="color: red; font-weight: 900;"class="dropdown-item " href="/cycles">Cycles</a></li>
-                    <li><a style="color: red;font-weight: 900;"class="dropdown-item" href="matress/index.html">Matress</a></li>
-                    <li><a style="color: red;font-weight: 900;" class="dropdown-item" href="bucket/index.html">Buckets</a></li>
-                    <li><a style="color: red;font-weight: 900;"class="dropdown-item" href="LAMPS/index.html">Lamps</a></li>
+                    <li><a style="color: red;font-weight: 900;"class="dropdown-item" href="/matress">Matress</a></li>
+                    <li><a style="color: red;font-weight: 900;" class="dropdown-item" href="/bucket">Buckets</a></li>
+                    <li><a style="color: red;font-weight: 900;"class="dropdown-item" href="/lamps">Lamps</a></li>
                     
                   </ul>
                 
@@ -216,7 +240,7 @@
                 
                 <div class="box">
                     <!-- <p class="intro">Clothes</p> -->
-                    <a href="/books"> <img src="../static/books/og palanna eng chemistry book.jpg alt=""></a>
+                    <a href="/books"> <img src="../static/books/BOOK 5.jpg  "alt=""></a>
                     
                 </div>
                 <div class="box">
@@ -273,25 +297,26 @@
     <section id="contact">
         <h1 class="contact-head">Contact Us</h1>
         <div id="contact-box">
-            <form action="">
+            <form   method="post" action="/">
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="name">Name: </label>
                     <input type="text" name="name" id="name" placeholder="Enter your name">
                 </div>
                 <div class="form-group">
                     <label for="email">Email: </label>
-                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number: </label>
-                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                    <input type="phone" name="phone" id="phone" placeholder="Enter your phone">
                 </div>
                 <div class="form-group">
                     <label for="message">Message: </label>
                     <textarea name="message" id="message" cols="30" rows="10"></textarea>
                 </div>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button style="background-color: rgb(212, 216, 209); color: black; font-weight: bold; box-shadow: 3px 3px red; border: 2px solid black; border-radius: 12px; font-family: cursive;padding: 10px;" class="btn btn-primary  " type="button" >SUBMIT</button>
+                    <button style="background-color: rgb(212, 216, 209); color: black; font-weight: bold; box-shadow: 3px 3px red; border: 2px solid black; border-radius: 12px; font-family: cursive;padding: 10px;" class="btn btn-primary  " type="submit" >SUBMIT</button>
                     
                 </div>
             </form>

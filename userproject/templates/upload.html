@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Rental</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/phone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Oswald&family=Pacifico&family=Playball&family=Teko&display=swap" rel="stylesheet">
+   
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Oswald&family=Pacifico&family=Playball&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+  {% if messages %}
+  {% for message in messages%}
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+      
+      {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor%}
+   {% endif %} 
+    <nav class="navbar navbar-expand-lg bg-light
+    ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../static/justrent2.jpg" alt="" srcset="" height="60px" width="150px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a   style="    color: red; font-weight: bold; font-size: 1.3rem;
+                "class="nav-link active " aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a style="    color: red; font-weight: bold; font-size: 1.3rem;
+                "class="nav-link" href="" >Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a style="    color: red; font-weight: bold; font-size: 1.3rem;
+                "class="nav-link" href="/upload" >Add Item</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a style="    color: red; font-weight: bold; font-size: 1.3rem;
+                "class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Campus
+                </a>
+                <ul  style="border: none;" class="dropdown-menu bg-light">
+                  <li><a style="color: red; font-weight: 900;"class="dropdown-item " href="#">Vit Vellore</a></li>
+                  <li><a style="color: red;font-weight: 900;"class="dropdown-item" href="#">Vit Bhopal</a></li>
+                  <li><a style="color: red;font-weight: 900;" class="dropdown-item" href="#">Vit Amravati</a></li>
+                  <li><a style="color: red;font-weight: 900;"class="dropdown-item" href="#">Vit Chennai</a></li>
+                  
+                </ul>
+                
+              </li>
+              <li class="nav-item dropdown">
+                <a style="    color: red; font-weight: bold; font-size: 1.3rem;
+                "class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul  style="border: none;" class="dropdown-menu bg-light">
+                    <li><a style="color: red; font-weight: 900;"class="dropdown-item " href="/cycles">Cycles</a></li>
+                    <li><a style="color: red;font-weight: 900;"class="dropdown-item" href="/matress">Matress</a></li>
+                    <li><a style="color: red;font-weight: 900;" class="dropdown-item" href="/bucket">Buckets</a></li>
+                    <li><a style="color: red;font-weight: 900;"class="dropdown-item" href="/lamps">Lamps</a></li>
+                    
+                  </ul>
+                
+              </li>
+              <!-- <a href="login/index.html"><button style="margin-left: 10px; border-radius: 12px; border:2px solid red; box-shadow: 2px 2px red;" class="btn btn-outline-danger" >Login</button></a> -->
+            </ul>
+            <form class="d-flex" role="search">
+              <input style="border: 2px solid red; border-radius: 12px; box-shadow: 2px 2px red;" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button style="border-radius: 12px; border:2px solid red; box-shadow: 2px 2px red;" class="btn btn-outline-danger" type="submit">Search</button>
+              <a href="/logout"><button style="margin-left: 10px; border-radius: 12px; border:2px solid red; box-shadow: 2px 2px red;" class="btn btn-outline-danger" type="button">Logout</button></a>
+            </form>
+            
+          </div>
+          
+         
+        </div>
+      </nav>
+   <!-- <hr> -->
+    <div id="vision">
+        <div class="title">
+            HOT DEALS TODAY!!!!
+        </div>
+    </div>
+    
+    <div id="carouselExampleAutoplaying" class="carousel slide " style="background-color: #ffffff;">
+        <div class="carousel-inner container-fluid">
+          <div class="carousel-item active" >
+            <img src="../static/cycles_pic/cycle8.jpeg" class="d-block w-100" alt="..." height="400px"   >
+          </div>
+          <div class="carousel-item">
+            <img src="../static/books/dsa robert lafore second edition on java book.jpg" class="d-block w-100" alt="..." height="400px" >
+          </div>
+          <div class="carousel-item">
+            <img src="../static/lamps/lamp 4.jpg" class="d-block w-100" alt="..." height="400px" >
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+    
+    <style></style>
+    <section id="contact" style="background-color: white; margin-top: 100px ; "class="container">
+        <h1 class="contact-head container" style="background-color: rgb(213, 213, 106); margin-bottom: 0; border-top-right-radius: 25px; border-top-left-radius: 25px;" >Add Product</h1>
+        <div id="contact-box"  style="background-color: rgb(202, 231, 75);border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;">
+            <form   method="post" action="/upload">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="phone" id="phone" placeholder="Enter your phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">Picture of the Product: </label>
+                    <input type="file" name="photo" id="photo" >
+                </div>
+                <div class="form-group">
+                  <label for="type1">  Type(Cycle/Lamp/Book) </label>
+                  <input type="text" name="type1" id="type1" >
+              </div>
+              <div class="form-group">
+                <label for="inUse">  In use from </label>
+                <input type="date" name="inUse" id="inUse" value="{{m.inUse|date:'Y-m-d'}}" >
+            </div>
+                
+
+                <div class="form-group">
+                    <label for="description">Description: </label>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                </div>
+               
+                <br>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button style="background-color: rgb(212, 216, 209); color: black; font-weight: bold; box-shadow: 3px 3px red; border: 2px solid black; border-radius: 12px; font-family: cursive;padding: 10px;" class="btn btn-primary  " type="submit" >SUBMIT</button>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="foot-panel1">
+           <a href="#navbarSupportedContent">Back to top</a> 
+        </div>
+        <div class="foot-panel2">
+            <ul>
+                <li><p>Get to know us</p></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Blog </a></li>
+                <li><a href="#">About amazon</a></li>
+                <li><a href="#">Investor relation</a></li>
+                <li><a href="#">Aamazon devvices  </a></li>
+
+            </ul>
+            <ul>
+                <li><p>Make money with us</p></li>
+                <li><a href="#">Sell products on Amazon</a></li>
+                <li><a href="#">Sell on Amazon Business </a></li>
+                <li><a href="#">Sell apps on Amazon</a></li>
+                <li><a href="#"> Become an Affiliate</a></li>
+                <li><a href="#">Self-Publish with Us  </a></li>
+
+            </ul>
+
+            <ul>
+                <li><p>Amazon payment products</p></li>
+                <li><a href="#">Amazon Business card</a></li>
+                <li><a href="#">Shop with points </a></li>
+                <li><a href="#">Reload your Balance </a></li>
+                <li><a href="#">Amazon currecy converter</a></li>
+                
+
+            </ul>
+            <ul>
+                <li><p>Let us help u</p></li>
+                <li><a href="#">Amazon and COVID-19</a></li>
+                <li><a href="#">Your Account </a></li>
+                <li><a href="#"> Your Orders</a></li>
+                <li><a href="#">Shipping Rates & Policies</a></li>
+                <li><a href="#"> Returns & Replacements  </a></li>
+                <li><a href="#"> Help  </a></li>
+
+            </ul>
+        </div>
+        <div class="foot-panel3">
+            <img src="amazon_logo.png" alt="">
+            
+        </div>
+        <div class="foot-panel4">
+            <div class="pages">
+                <a>Conditions of use</a>
+                <a >Privacy notice</a>
+                <a>Your ads privacy choices</a>
+            </div>
+            <div class="copyright">
+                &copy; 1996-2023, Amazon.com, Inc.ir ots affiliates
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    
+
+    
+</body>
+</html>

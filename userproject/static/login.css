@@ -3,24 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-nav{
-    display: flex;
-    justify-content: center;
-  /* text-align: center;  */
-   
-    height: 100px;
-    align-items: center;
-    background-color:rgb(83, 35, 214);
-    position: relative;
-    top: 0;
-    width: 100vw;
-    font-size: 2rem;
-    font-family: 'Oswald', sans-serif;
-    font-variant: small-caps;
-    color: white;
-    
 
-}
 .login{
     
     height: 600px;
@@ -37,8 +20,8 @@ nav{
 }
 .login img{
     margin:50px;
-    
-    /* mix-blend-mode: multiply; */
+    /* width: 400px; */
+    mix-blend-mode: multiply;
 
 }
 .login input{
